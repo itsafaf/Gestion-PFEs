@@ -1,0 +1,138 @@
+/* Style général de la sidebar */
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 80px; /* Largeur réduite pour n'afficher que les icônes */
+    height: 100vh;
+    background: linear-gradient(135deg, #7ca9da, #0872e4); /* Dégradé blanc à gris très clair */
+    color: #333; /* Texte en couleur foncée pour contraste avec le fond clair */
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    box-shadow: 4px 0 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Lors du survol, élargir la sidebar pour afficher texte + icônes */
+.sidebar:hover {
+    width: 250px; /* Largeur plus grande pour afficher le texte */
+}
+
+/* Logo / Titre de la sidebar */
+.sidebar-logo {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.sidebar-logo h2 {
+    font-size: 26px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #fff;
+    text-transform: uppercase;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Liste d'éléments de la sidebar */
+.sidebar-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Style des items de la liste */
+.sidebar-item {
+    display: flex;
+    align-items: center;
+    padding: 20px 25px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    position: relative;
+    opacity: 0; /* Masquer le texte par défaut */
+    width: 100%; /* Prendre toute la largeur disponible */
+    transition: opacity 0.3s ease, width 0.3s ease; /* Animation pour opacité et largeur */
+}
+
+/* Afficher le texte et les icônes lorsque survolée */
+.sidebar:hover .sidebar-item {
+    opacity: 1; /* Afficher le texte lors du survol */
+}
+
+/* Effet au survol d'un item */
+.sidebar-item:hover {
+    background: rgba(255, 255, 255, 0.2); /* Fond léger au survol */
+    transform: translateX(10px); /* Décalage à droite au survol */
+    border-radius: 12px;
+}
+
+/* Ajout d'une animation de cercle autour de l'élément au survol */
+.sidebar-item::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.4s ease-out;
+}
+
+/* Icônes des éléments */
+.sidebar-icon {
+    margin-right: 15px;
+    font-size: 24px;
+    transition: transform 0.3s ease;
+}
+
+/* Animation des icônes au survol */
+.sidebar-item:hover .sidebar-icon {
+    transform: rotate(360deg); /* Rotation de l'icône au survol */
+}
+
+/* Texte des éléments */
+.sidebar-item span {
+    color: #fff;
+    font-weight: 500;
+    display: inline; /* Afficher le texte par défaut */
+    transition: opacity 0.3s ease; /* Animation de l'apparition du texte */
+}
+
+/* Affichage du texte uniquement au survol de la sidebar */
+.sidebar:hover .sidebar-item span {
+    opacity: 1; /* Afficher le texte au survol */
+}
+
+/* Masquer le texte par défaut lorsque non survolé */
+.sidebar:not(:hover) .sidebar-item span {
+    display: none; /* Masquer le texte par défaut */
+}
+
+/* Lors du survol de la sidebar, afficher seulement les icônes et le texte du menu "Menu" */
+.sidebar-item.menu-text {
+    opacity: 0; /* Masquer le texte du menu par défaut */
+}
+
+/* Afficher uniquement les icônes du menu et des autres éléments lorsqu'on quitte la sidebar */
+.sidebar:not(:hover) .sidebar-item {
+    width: 80px;
+    opacity: 1;
+}
+
+/* Style pour petits écrans */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 60px; /* Réduit encore la largeur sur les petits écrans */
+    }
+
+    .sidebar-logo h2 {
+        font-size: 22px;
+    }
+
+    .sidebar-item {
+        font-size: 18px;
+    }
+}

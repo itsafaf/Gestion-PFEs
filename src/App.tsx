@@ -1,21 +1,32 @@
-import { useState } from 'react'
-import './App.css'
-import Login from './components/Login';
-import Profile from './components/Profile';
-import Dashboard from './components/Dashboard'
-
-
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import './App.css';
+import Login from './components/LoginPage/Login';
+import ProfilePage from './components/ProfilePage/ProfilePage';
+import Dashboard from './components/Dashboard/Dashboard';
+import SideBar from './components/SideBar/SideBar';
 
 function App() {
-
   return (
-    <div>
-      <Profile />
-      <Login />
-      <Dashboard />
-    </div>
-      
-  )
+    <Router>
+      <div className="app">
+        {/* Menu de navigation pour accéder à chaque composant */}
+        <nav>
+          /<Link to="/profile">Profile</Link>
+          <Link to="/login">Login</Link>
+          <Link to="/dashboard">Dashboard</Link>
+          <Link to="/sidebar">SideBar</Link>
+        </nav>
+
+        {/* Définition des routes pour chaque composant */}
+        <Routes>
+          <Route path="/profile" element={<ProfilePage />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/sidebar" element={<SideBar />} />
+        </Routes>
+      </div>
+    </Router>
+  );
 }
 
-export default App
+export default App;

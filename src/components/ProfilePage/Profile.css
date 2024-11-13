@@ -1,0 +1,165 @@
+/* profile.css */
+
+.profile-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background: linear-gradient(135deg, #f0f4ff, #dfe9fd);
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .profile-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+  }
+  
+  .profile-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  
+  .avatar img {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    border: 4px solid #007bff;
+    margin-right: 25px;
+    transition: transform 0.3s ease;
+  }
+  
+  .avatar img:hover {
+    transform: scale(1.05);
+  }
+  
+  .user-info h1 {
+    font-size: 28px;
+    color: #007bff;
+    margin: 0;
+    transition: color 0.3s ease;
+  }
+  
+  .user-info h1:hover {
+    color: #0056b3;
+  }
+  
+  .user-info p {
+    font-size: 16px;
+    color: #555;
+    margin: 4px 0 0;
+  }
+  
+  /* Styles généraux pour les sections */
+  .profile-content section {
+      margin-bottom: 25px;
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    /* Effet d'agrandissement au survol */
+    .profile-content section:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Ombre plus intense */
+    }
+    
+    /* Styles spécifiques pour les titres */
+    .profile-content h2 {
+      font-size: 22px;
+      color: #333;
+      margin-bottom: 12px;
+      position: relative;
+    }
+    
+    /* Effet visuel supplémentaire pour les titres */
+    .profile-content h2::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      width: 40px;
+      height: 3px;
+      background: #007bff;
+    }
+  .profile-content p {
+    font-size: 17px;
+    color: #555;
+    margin: 8px 0;
+  }
+  
+  .profile-content ul {
+    list-style: none;
+    padding: 0;
+    font-size: 16px;
+  }
+  
+  .profile-content li {
+    margin: 6px 0;
+    color: #333;
+  }
+  
+  .profile-footer {
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  .profile-footer button {
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(90deg, #007bff, #0056b3);
+    border: none;
+    border-radius: 25px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .profile-footer button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.4s ease;
+  }
+  
+  .profile-footer button:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  
+  .profile-footer button:hover {
+    background: linear-gradient(90deg, #0056b3, #007bff);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+  }
+  
+  /* Conteneur principal avec Sidebar */
+  .profile-page {
+      display: flex;
+    }
+    
+    .profile-container {
+      margin-left: 80px; /* Ajuster en fonction de la largeur réduite de la Sidebar */
+      flex: 1; /* Permet au profil d'occuper l'espace restant */
+      padding: 20px;
+      transition: margin-left 0.3s ease-in-out;
+    }
+    
+    /* Lorsque la Sidebar est élargie */
+    .sidebar:hover + .profile-container {
+      margin-left: 250px; /* Ajustez selon la largeur de la Sidebar élargie */
+    }
+    
