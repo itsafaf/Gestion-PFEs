@@ -1,0 +1,95 @@
+/* LandingPage.css */
+.landing-page {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .main-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 50px;
+    text-align: center;
+  }
+  
+  .image-container {
+    margin-bottom: 30px;
+  }
+  
+  .graduate-photo {
+    width: 100%;
+    max-width: 1280px;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.5s ease;
+  }
+  
+  .graduate-photo:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Card container */
+  .card-container {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 50px;
+  }
+  
+  .card {
+    width: 250px;
+    height: 300px;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    padding: 20px;
+    position: relative;
+  }
+  
+  .card:hover {
+    transform: scale(1.1);
+    background-color: #45a049;
+    cursor: pointer;
+  }
+  
+  /* Card icon */
+  .icon {
+    font-size: 40px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+  }
+  
+  .card:hover .icon {
+    transform: rotate(15deg); /* L'icône tourne un peu au survol */
+  }
+  
+  .card h2 {
+    margin: 10px 0;
+    font-size: 1.5rem;
+  }
+  
+  .card p {
+    font-size: 1rem;
+    padding: 10px;
+    text-align: center;
+    flex-grow: 1;
+  }
+  
+  /* Effet de transition sur le texte */
+  .card p {
+    transition: color 0.3s ease;
+  }
+  
+  .card:hover p {
+    color: #fff;
+  }
+  

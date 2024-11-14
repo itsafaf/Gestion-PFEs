@@ -1,0 +1,89 @@
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 3rem 0;
+    font-family: Arial, sans-serif; /* Ajoute une police moderne */
+  }
+  
+  .footer-section {
+    margin-bottom: 2rem;
+    padding: 0 1.5rem; /* Ajoute un peu d'espace interne */
+  }
+  
+  .footer-section h4 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-transform: uppercase; /* Pour un effet de texte en majuscules */
+    letter-spacing: 1px; /* Espacement des lettres */
+  }
+  
+  .footer-section ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .footer-section li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .footer-section a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease; /* Transition douce pour les couleurs */
+  }
+  
+  .footer-section a:hover {
+    color: #ccc;
+    text-decoration: underline; /* Ajoute un soulignement au survol */
+  }
+  
+  .footer .social-icons {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  .footer .social-icons a {
+    color: #fff;
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+  }
+  
+  .footer .social-icons a:hover {
+    transform: scale(1.2); /* Effet de zoom au survol */
+    color: #ccc;
+  }
+  
+  .copyright {
+    font-size: 0.9rem;
+    color: #aaa;
+    margin-top: 2rem;
+    text-align: center;
+    font-style: italic;
+  }
+  
+  /* Mobile responsiveness */
+  @media screen and (max-width: 768px) {
+    .footer-section {
+      padding: 0 1rem; /* Réduit les marges internes pour les écrans plus petits */
+    }
+  
+    .footer-section h4 {
+      font-size: 1rem; /* Réduit la taille des titres sur mobile */
+    }
+  
+    .footer .social-icons {
+      gap: 0.8rem;
+    }
+  
+    .footer .social-icons a {
+      font-size: 1.3rem; /* Réduit la taille des icônes sur mobile */
+    }
+  
+    .copyright {
+      font-size: 0.8rem;
+    }
+  }
+  

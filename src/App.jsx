@@ -1,9 +1,11 @@
+// App.jsx
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import './App.css';
 import LoginPage from './components/LoginPage/LoginPage';
 import ProfilePage from './components/ProfilePage/ProfilePage';
 import Dashboard from './components/Dashboard/Dashboard';
 import SideBar from './components/SideBar/SideBar';
+import LandingPage from './components/LandingPage/LandingPage'; // Importer la page de destination
 
 function App() {
   return (
@@ -15,10 +17,12 @@ function App() {
           <Link to="/login">Login</Link>
           <Link to="/dashboard">Dashboard</Link>
           <Link to="/sidebar">SideBar</Link>
+          <Link to="/">Accueil</Link> {/* Lien vers la LandingPage */}
         </nav>
 
         {/* Définition des routes pour chaque composant */}
         <Routes>
+          <Route path="/" element={<LandingPage />} /> {/* Route vers la LandingPage */}
           <Route path="/profile" element={<ProfilePage />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/dashboard" element={<Dashboard />} />
