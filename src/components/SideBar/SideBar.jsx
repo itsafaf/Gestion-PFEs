@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import './SideBar.css';
 import { FaListAlt, FaSignOutAlt, FaUserAlt, FaPlus, FaBars } from 'react-icons/fa';
 
-const SideBar: React.FC = () => {
-  const [isHovered, setIsHovered] = useState<boolean>(false);
+const SideBar = () => {
+  const [isHovered, setIsHovered] = useState(false);
 
   return (
     <div 

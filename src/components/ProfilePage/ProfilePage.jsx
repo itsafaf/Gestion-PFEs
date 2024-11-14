@@ -2,20 +2,8 @@ import React, { useState } from 'react';
 import './profile.css';
 import SidBar from '../SideBar/SideBar';
 
-type UserInfo = {
-  name: string;
-  email: string;
-  dob: string;
-  address: string;
-  phone: string;
-  language: string;
-  notifications: string;
-  darkMode: string;
-  loginHistory: string[];
-};
-
-const ProfilePage: React.FC = () => {
-  const [userInfo] = useState<UserInfo>({
+const ProfilePage = () => {
+  const [userInfo] = useState({
     name: 'John Doe',
     email: 'john.doe@example.com',
     dob: '1 Janvier 1990',
@@ -78,7 +66,7 @@ const ProfilePage: React.FC = () => {
             </ul>
           </section>
         </div>
-    
+
         <div className="profile-footer">
           <button onClick={handleLogout}>Se déconnecter</button>
         </div>

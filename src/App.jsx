@@ -11,7 +11,7 @@ function App() {
       <div className="app">
         {/* Menu de navigation pour accéder à chaque composant */}
         <nav>
-          /<Link to="/profile">Profile</Link>
+          <Link to="/profile">Profile</Link>
           <Link to="/login">Login</Link>
           <Link to="/dashboard">Dashboard</Link>
           <Link to="/sidebar">SideBar</Link>
