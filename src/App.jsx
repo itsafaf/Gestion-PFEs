@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import './App.css';
-import Login from './components/LoginPage/Login';
+import LoginPage from './components/LoginPage/LoginPage';
 import ProfilePage from './components/ProfilePage/ProfilePage';
 import Dashboard from './components/Dashboard/Dashboard';
 import SideBar from './components/SideBar/SideBar';
@@ -20,7 +20,7 @@ function App() {
         {/* Définition des routes pour chaque composant */}
         <Routes>
           <Route path="/profile" element={<ProfilePage />} />
-          <Route path="/login" element={<Login />} />
+          <Route path="/login" element={<LoginPage />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/sidebar" element={<SideBar />} />
         </Routes>
