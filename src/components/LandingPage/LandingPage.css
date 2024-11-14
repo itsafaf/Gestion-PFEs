@@ -1,4 +1,4 @@
-/* LandingPage.css */
+/* Section principale */
 .landing-page {
     font-family: 'Arial', sans-serif;
     margin: 0;
@@ -7,89 +7,126 @@
   }
   
   .main-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-top: 50px;
     text-align: center;
+    padding: 50px 0;
   }
   
-  .image-container {
-    margin-bottom: 30px;
-  }
-  
-  .graduate-photo {
+/* Set the image to span the full width of the screen */
+.image-container {
+    width: 100%; /* Full viewport width */
+}
+
+.graduate-photo {
     width: 100%;
-    max-width: 1280px;
-    height: auto;
-    border-radius: 10px;
-    transition: transform 0.5s ease;
-  }
+    height: auto; /* Keep the original aspect ratio */
+    
+}
+
   
   .graduate-photo:hover {
     transform: scale(1.05);
   }
   
-  /* Card container */
+  /* Carte de l'enseignant, de l'étudiant et de l'admin */
   .card-container {
     display: flex;
     justify-content: space-around;
-    width: 100%;
-    margin-top: 50px;
+    margin: 50px 0;
+    gap: 30px;
+    padding: 20px;
   }
   
   .card {
+    background-color: #fff;
+    border-radius: 10px;
     width: 250px;
-    height: 300px;
-    background-color: #4CAF50;
-    color: white;
-    border-radius: 15px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, background-color 0.3s ease;
+    text-align: center;
     padding: 20px;
-    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
   
   .card:hover {
     transform: scale(1.1);
-    background-color: #45a049;
-    cursor: pointer;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
   }
   
-  /* Card icon */
   .icon {
-    font-size: 40px;
-    margin-bottom: 20px;
-    transition: transform 0.3s ease;
+    font-size: 2.5rem;
+    color: #081109;
+    background-color: #e6f7ec;
+    padding: 15px;
+    border-radius: 50%;
+    transition: transform 0.3s ease, background-color 0.3s ease;
   }
   
   .card:hover .icon {
-    transform: rotate(15deg); /* L'icône tourne un peu au survol */
+    transform: scale(1.2);
+    background-color: #45a049;
   }
   
-  .card h2 {
-    margin: 10px 0;
-    font-size: 1.5rem;
-  }
-  
-  .card p {
-    font-size: 1rem;
-    padding: 10px;
+  /* Section des avantages */
+  .benefits-section {
+    background-color: #f4f4f4;
+    padding: 40px;
     text-align: center;
-    flex-grow: 1;
   }
   
-  /* Effet de transition sur le texte */
-  .card p {
-    transition: color 0.3s ease;
+  .benefit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
   }
   
-  .card:hover p {
+  .benefit-icon {
+    font-size: 2rem;
+    margin-right: 15px;
+    color: #4CAF50;
+  }
+  
+  /* Section des fonctionnalités */
+  .features-section {
+    padding: 40px;
+    text-align: center;
+  }
+  
+  .feature-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+  }
+  
+  .feature-item {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .feature-icon {
+    font-size: 1.5rem;
+    color: #4CAF50;
+    margin-right: 15px;
+  }
+  
+  /* Bouton principal */
+  .cta-button {
+    background-color: #4CAF50;
     color: #fff;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .cta-button:hover {
+    background-color: #45a049;
   }
   
