@@ -56,12 +56,12 @@
     color: #081109;
     background-color: #e6f7ec;
     padding: 15px;
-    border-radius: 50%;
+    border-radius: 40%;
     transition: transform 0.3s ease, background-color 0.3s ease;
   }
   
   .card:hover .icon {
-    transform: scale(1.2);
+    transform: scale(0.7);
     background-color: #45a049;
   }
   
