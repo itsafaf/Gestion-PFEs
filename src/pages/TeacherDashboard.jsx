@@ -1,23 +1,39 @@
 import React from "react";
-import "./css/TeacherDashboard.css"; // Assuming a dedicated CSS file for the teacher dashboard
+import "./css/TeacherDashboard.css"; // Assuming a CSS file for styling
 
 const TeacherDashboard = () => {
   return (
     <div className="dashboard-container">
-      <h2 className="dashboard-title">Welcome, Teacher</h2>
-      <p className="dashboard-date">Wed, 08 June 2022</p>
-      <div className="dashboard-header">
-        <span className="dashboard-name">Teacher Name</span>
-        <button className="dashboard-edit-btn">Edit Profile</button>
-      </div>
-      <div className="dashboard-section">
-        <h3 className="dashboard-section-title">My Responsibilities</h3>
-        <ul className="dashboard-list">
-          <li>Manage Projects</li>
-          <li>Supervise Students</li>
-          <li>Jury Assignments</li>
-        </ul>
-        <button className="dashboard-action-btn">Update Responsibilities</button>
+      <h2 className="dashboard-title">Teacher Dashboard</h2>
+      <p className="dashboard-date">Welcome, Teacher! Today is {new Date().toDateString()}</p>
+      
+      <div className="dashboard-tabs">
+        <div className="tab" id="project-management">
+          <h3 className="tab-title">Project Management</h3>
+          <ul className="tab-actions">
+            <li><button className="tab-btn">Propose New Project</button></li>
+            <li><button className="tab-btn">View My Projects</button></li>
+            <li><button className="tab-btn">Edit Existing Projects</button></li>
+          </ul>
+        </div>
+
+        <div className="tab" id="supervision">
+          <h3 className="tab-title">Supervision</h3>
+          <ul className="tab-actions">
+            <li><button className="tab-btn">Select Projects to Supervise</button></li>
+            <li><button className="tab-btn">View Supervised Projects</button></li>
+            <li><button className="tab-btn">Submit Progress Reports</button></li>
+          </ul>
+        </div>
+
+        <div className="tab" id="jury-assignments">
+          <h3 className="tab-title">Jury Assignments</h3>
+          <ul className="tab-actions">
+            <li><button className="tab-btn">View Jury Assignments</button></li>
+            <li><button className="tab-btn">Submit Availability</button></li>
+            <li><button className="tab-btn">Access Evaluation Forms</button></li>
+          </ul>
+        </div>
       </div>
     </div>
   );
