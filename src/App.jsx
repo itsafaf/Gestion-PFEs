@@ -6,7 +6,7 @@ import ProfilePage from './components/ProfilePage/ProfilePage';
 import Dashboard from './components/Dashboard/Dashboard';
 import SideBar from './components/SideBar/SideBar';
 import LandingPage from './components/LandingPage/LandingPage'; // Importer la page de destination
-
+import SignupPage from './components/SignupPage/SignupPage';
 function App() {
   return (
     <Router>
@@ -15,6 +15,7 @@ function App() {
         <nav>
           <Link to="/profile">Profile</Link>
           <Link to="/login">Login</Link>
+          <Link to="/signup">SignupPage</Link>
           <Link to="/dashboard">Dashboard</Link>
           <Link to="/sidebar">SideBar</Link>
           <Link to="/">Accueil</Link> {/* Lien vers la LandingPage */}
