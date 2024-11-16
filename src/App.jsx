@@ -6,7 +6,12 @@ import ProfilePage from './components/ProfilePage/ProfilePage';
 import Dashboard from './components/Dashboard/Dashboard';
 import SideBar from './components/SideBar/SideBar';
 import LandingPage from './components/LandingPage/LandingPage'; // Importer la page de destination
+<<<<<<< HEAD
 import SignupPage from './components/SignupPage/SignupPage';
+=======
+import StudentProfile from './pages/Etudiant.jsx';
+
+>>>>>>> d8e93a7b9df98972866c5182541738622e5000c3
 function App() {
   return (
     <Router>
@@ -29,6 +34,7 @@ function App() {
           <Route path="/signup" element={<SignupPage />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/sidebar" element={<SideBar />} />
+          <Route path="/student" element={<StudentProfile />} />
         </Routes>
       </div>
     </Router>
