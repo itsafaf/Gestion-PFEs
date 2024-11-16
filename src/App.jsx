@@ -13,6 +13,7 @@ import TeacherDashboard from './pages/TeacherDashboard';
 import ProjectValidation from './pages/ProjectValidation'; // Import ProjectValidation
 import StudentProgress from './pages/StudentProgress'; // Import StudentProgress
 import JuryAssignment from './pages/JuryAssignment'; // Import JuryAssignment
+import NotificationCenter from './pages/NotificationCenter';
 
 function App() {
   return (
@@ -52,6 +53,7 @@ function App() {
           <Route path="/project-validation" element={<ProjectValidation />} /> {/* Route for ProjectValidation */}
           <Route path="/student-progress" element={<StudentProgress />} /> {/* Route for StudentProgress */}
           <Route path="/jury-assignment" element={<JuryAssignment />} /> {/* Route for JuryAssignment */}
+          <Route path="/notification" element={<NotificationCenter />} /> {/* Route for JuryAssignment */}
         </Routes>
       </div>
     </Router>
