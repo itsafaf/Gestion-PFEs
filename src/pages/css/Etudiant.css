@@ -1,0 +1,85 @@
+/* Conteneur principal */
+.profile-container {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    max-width: 600px;
+    margin: auto;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+  }
+  
+  /* Titre principal */
+  .profile-title {
+    text-align: center;
+    color: #333;
+    margin-bottom: 5px;
+  }
+  
+  /* Date */
+  .profile-date {
+    text-align: center;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  /* En-tête du profil */
+  .profile-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Nom de l'utilisateur */
+  .profile-name {
+    font-weight: bold;
+    font-size: 18px;
+    color: #333;
+  }
+  
+  /* Bouton Modifier */
+  .profile-edit-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .profile-edit-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Section Email */
+  .profile-email-section {
+    margin-bottom: 20px;
+  }
+  
+  /* Titre Email */
+  .profile-email-title {
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  /* Adresse Email */
+  .profile-email {
+    margin-bottom: 20px;
+    color: #666;
+  }
+  
+  /* Bouton Ajouter */
+  .profile-add-btn {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .profile-add-btn:hover {
+    background-color: #218838;
+  }
+  

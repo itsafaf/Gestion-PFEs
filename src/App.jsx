@@ -6,6 +6,7 @@ import ProfilePage from './components/ProfilePage/ProfilePage';
 import Dashboard from './components/Dashboard/Dashboard';
 import SideBar from './components/SideBar/SideBar';
 import LandingPage from './components/LandingPage/LandingPage'; // Importer la page de destination
+import StudentProfile from './pages/Etudiant.jsx';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
           <Route path="/login" element={<LoginPage />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/sidebar" element={<SideBar />} />
+          <Route path="/student" element={<StudentProfile />} />
         </Routes>
       </div>
     </Router>

@@ -1,9 +1,11 @@
 // components/LandingPage/LandingPage.jsx
 import React from 'react';
+import { Link } from "react-router-dom";
 import Nav from '../Nav/Nav';
 import Footer from '../Footer/Footer';
 import { FaChalkboardTeacher, FaUserGraduate, FaCogs, FaRocket, FaHandsHelping, FaCheckCircle } from 'react-icons/fa';
 import './LandingPage.css';
+
 
 const LandingPage = () => {
   return (
@@ -31,9 +33,11 @@ const LandingPage = () => {
           <p>Développe des compétences pour former la prochaine génération.</p>
         </div>
         <div className="card">
+        <Link to="/student" className="card-link"> 
           <div className="icon"><FaUserGraduate /></div>
           <h2>Étudiant</h2>
           <p>Acquiert les connaissances pour un avenir prometteur.</p>
+        </Link>
         </div>
         <div className="card">
           <div className="icon"><FaCogs /></div>

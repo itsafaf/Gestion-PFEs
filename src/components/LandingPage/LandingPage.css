@@ -129,4 +129,13 @@
   .cta-button:hover {
     background-color: #45a049;
   }
+  /*hna rani ghir nchof */
+  .card-link {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .card-link:hover {
+    color: #007bff; /* Changez la couleur au survol si nécessaire */
+  }
   
