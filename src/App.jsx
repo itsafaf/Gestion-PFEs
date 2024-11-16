@@ -4,9 +4,12 @@ import LoginPage from './components/LoginPage/LoginPage';
 import ProfilePage from './components/ProfilePage/ProfilePage';
 import Dashboard from './components/Dashboard/Dashboard';
 import SideBar from './components/SideBar/SideBar';
-import LandingPage from './components/LandingPage/LandingPage'; // Import the landing page
+import LandingPage from './components/LandingPage/LandingPage';
 import SignupPage from './components/SignupPage/SignupPage';
-
+import EntrepriseDashboard from './pages/EntrepriseDashboard';
+import AdminDashboard from './pages/AdminDashboard';
+import StudentDashboard from './pages/StudentDashboard';
+import TeacherDashboard from './pages/TeacherDashboard';
 
 function App() {
   return (
@@ -15,48 +18,31 @@ function App() {
         {/* Navigation menu */}
         <nav className="navigation">
           <ul>
-            <li>
-              <Link to="/">Accueil</Link> {/* Link to LandingPage */}
-            </li>
-            <li>
-              <Link to="/login">Login</Link>
-            </li>
-            <li>
-              <Link to="/signup">Signup</Link>
-            </li>
-            <li>
-              <Link to="/profile">Profile</Link>
-            </li>
-            <li>
-              <Link to="/dashboard">Dashboard</Link>
-            </li>
-            <li>
-              <Link to="/sidebar">SideBar</Link>
-            </li>
-            <li>
-              <Link to="/student">Étudiant</Link>
-            </li>
-            <li>
-              <Link to="/teacher">Teacher</Link>
-            </li>
-            <li>
-              <Link to="/admin">Admin</Link>
-            </li>
-            <li>
-              <Link to="/entreprise">Entreprise</Link>
-            </li>
+            <li><Link to="/">Accueil</Link></li>
+            <li><Link to="/login">Login</Link></li>
+            <li><Link to="/signup">Signup</Link></li>
+            <li><Link to="/profile">Profile</Link></li>
+            <li><Link to="/dashboard">Dashboard</Link></li>
+            <li><Link to="/sidebar">SideBar</Link></li>
+            <li><Link to="/student">Dashboard Étudiant</Link></li>
+            <li><Link to="/teacher">Dashboard Enseignant</Link></li>
+            <li><Link to="/admin">Dashboard Admin</Link></li>
+            <li><Link to="/entreprise">Dashboard Entreprise</Link></li>
           </ul>
         </nav>
 
         {/* Define routes for each component */}
         <Routes>
-          <Route path="/" element={<LandingPage />} /> {/* Route for LandingPage */}
+          <Route path="/" element={<LandingPage />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/signup" element={<SignupPage />} />
           <Route path="/profile" element={<ProfilePage />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/sidebar" element={<SideBar />} />
-          
+          <Route path="/student" element={<StudentDashboard />} />
+          <Route path="/teacher" element={<TeacherDashboard />} />
+          <Route path="/admin" element={<AdminDashboard />} />
+          <Route path="/entreprise" element={<EntrepriseDashboard />} />
         </Routes>
       </div>
     </Router>
