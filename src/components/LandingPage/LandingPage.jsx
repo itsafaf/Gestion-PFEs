@@ -28,9 +28,11 @@ const LandingPage = () => {
       {/* Section des cartes alignées sur une ligne */}
       <section className="card-container">
         <div className="card">
+        <Link to="/prof" className="card-link">
           <div className="icon"><FaChalkboardTeacher /></div>
           <h2>Enseignant</h2>
           <p>Développe des compétences pour former la prochaine génération.</p>
+          </Link>
         </div>
         <div className="card">
         <Link to="/student" className="card-link"> 

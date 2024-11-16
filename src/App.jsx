@@ -7,6 +7,7 @@ import SideBar from './components/SideBar/SideBar';
 import LandingPage from './components/LandingPage/LandingPage'; // Import the landing page
 import SignupPage from './components/SignupPage/SignupPage';
 import StudentProfile from './pages/Etudiant.jsx';
+import Teacher from './pages/teacher.jsx';
 
 function App() {
   return (
@@ -48,6 +49,7 @@ function App() {
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/sidebar" element={<SideBar />} />
           <Route path="/student" element={<StudentProfile />} />
+          <Route path="/prof" element={<Teacher/>} />
         </Routes>
       </div>
     </Router>

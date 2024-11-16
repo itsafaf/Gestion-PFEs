@@ -1,85 +1,276 @@
-/* Conteneur principal */
-.profile-container {
-    font-family: Arial, sans-serif;
+/* Global styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f4f4f9;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  animation: fadeIn 1s ease-out;
+}
+
+/* Profile settings container */
+.profile-settings {
+ /* max-width: 900px;*/
+  width: 1000px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: #ffffff;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  transform: translateY(30px);
+  opacity: 0;
+  animation: slideIn 0.8s forwards, fadeIn 1s forwards;
+}
+
+.profile-settings:hover {
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Header styles */
+.header {
+  text-align: center;
+  margin-bottom: 40px;
+  opacity: 0;
+  animation: fadeIn 1s forwards 0.2s;
+}
+
+.header h1 {
+  color: #333;
+  font-size: 2.2em;
+  font-weight: 600;
+  margin-bottom: 5px;
+  transform: translateX(-20px);
+  animation: slideInLeft 0.8s forwards 0.3s;
+}
+
+.header .date {
+  color: #888;
+  font-size: 1em;
+  margin: 10px 0;
+  opacity: 0;
+  animation: fadeIn 1s forwards 0.5s;
+}
+
+/* Search bar styles */
+.search-bar {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1em;
+  outline: none;
+  margin-top: 20px;
+  transition: border-color 0.3s ease;
+  opacity: 0;
+  animation: fadeIn 1s forwards 0.7s;
+}
+
+.search-bar:focus {
+  border-color: #007bff;
+}
+
+.search-bar:focus + .search-bar-label {
+  color: #007bff;
+}
+
+/* User info section */
+.user-info {
+  margin-top: 40px;
+  opacity: 0;
+  animation: fadeIn 1s forwards 1s;
+}
+
+.user-info h2 {
+  color: #333;
+  font-size: 1.6em;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.info-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  opacity: 0;
+  animation: fadeIn 1s forwards 1.2s;
+}
+
+.info-item label {
+  color: #555;
+  font-size: 1em;
+  flex: 1;
+  font-weight: 500;
+}
+
+.info-item input {
+  flex: 2;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1em;
+  background-color: #fafafa;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.info-item input:focus {
+  border-color: #007bff;
+  background-color: #f0f9ff;
+}
+
+.info-item input:focus + label {
+  color: #007bff;
+}
+
+/* Buttons */
+.edit-btn, .add-email-btn {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1em;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  opacity: 0;
+  animation: fadeIn 1s forwards 1.5s;
+}
+
+.edit-btn {
+  background-color: #007bff;
+  color: white;
+  margin-left: 10px;
+}
+
+.edit-btn:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+.add-email-btn {
+  background-color: #28a745;
+  color: white;
+  margin-top: 25px;
+}
+
+.add-email-btn:hover {
+  background-color: #218838;
+  transform: scale(1.05);
+}
+
+.add-email-btn:active {
+  box-shadow: 0 5px 15px rgba(40, 167, 69, 0.3);
+}
+
+/* Email section styles */
+.email-section {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  opacity: 0;
+  animation: fadeIn 1s forwards 1.8s;
+}
+
+.email-section h3 {
+  color: #333;
+  font-size: 1.6em;
+  font-weight: 500;
+}
+
+.email-section p {
+  color: #555;
+  font-size: 1.1em;
+  margin-top: 10px;
+  font-weight: 400;
+}
+
+/* Animation keyframes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .profile-settings {
     padding: 20px;
-    max-width: 600px;
-    margin: auto;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    background-color: #f9f9f9;
+    margin: 30px auto;
   }
-  
-  /* Titre principal */
-  .profile-title {
-    text-align: center;
-    color: #333;
-    margin-bottom: 5px;
+
+  .header h1 {
+    font-size: 1.8em;
   }
-  
-  /* Date */
-  .profile-date {
-    text-align: center;
-    color: #666;
-    margin-bottom: 20px;
+
+  .search-bar {
+    padding: 10px;
+    font-size: 0.9em;
   }
-  
-  /* En-tête du profil */
-  .profile-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
+
+  .info-item input {
+    padding: 10px;
+    font-size: 0.9em;
   }
-  
-  /* Nom de l'utilisateur */
-  .profile-name {
-    font-weight: bold;
-    font-size: 18px;
-    color: #333;
+
+  .edit-btn, .add-email-btn {
+    font-size: 1em;
+    padding: 10px 15px;
   }
-  
-  /* Bouton Modifier */
-  .profile-edit-btn {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 8px 12px;
-    border-radius: 4px;
-    cursor: pointer;
+
+  .email-section h3 {
+    font-size: 1.4em;
   }
-  
-  .profile-edit-btn:hover {
-    background-color: #0056b3;
-  }
-  
-  /* Section Email */
-  .profile-email-section {
-    margin-bottom: 20px;
-  }
-  
-  /* Titre Email */
-  .profile-email-title {
-    margin-bottom: 10px;
-    color: #333;
-  }
-  
-  /* Adresse Email */
-  .profile-email {
-    margin-bottom: 20px;
-    color: #666;
-  }
-  
-  /* Bouton Ajouter */
-  .profile-add-btn {
-    background-color: #28a745;
-    color: white;
-    border: none;
-    padding: 8px 12px;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .profile-add-btn:hover {
-    background-color: #218838;
-  }
-  
+}
+/* Button styles for "Envoyer" */
+.submit-btn {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1em;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin-top: 20px;
+  display: block;
+  width: 100%;
+}
+
+.submit-btn:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+.submit-btn:active {
+  background-color: #003f80;
+  box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+}
