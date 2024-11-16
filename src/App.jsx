@@ -10,6 +10,9 @@ import EntrepriseDashboard from './pages/EntrepriseDashboard';
 import AdminDashboard from './pages/AdminDashboard';
 import StudentDashboard from './pages/StudentDashboard';
 import TeacherDashboard from './pages/TeacherDashboard';
+import ProjectValidation from './pages/ProjectValidation'; // Import ProjectValidation
+import StudentProgress from './pages/StudentProgress'; // Import StudentProgress
+import JuryAssignment from './pages/JuryAssignment'; // Import JuryAssignment
 
 function App() {
   return (
@@ -28,6 +31,9 @@ function App() {
             <li><Link to="/teacher">Dashboard Enseignant</Link></li>
             <li><Link to="/admin">Dashboard Admin</Link></li>
             <li><Link to="/entreprise">Dashboard Entreprise</Link></li>
+            <li><Link to="/project-validation">Project Validation</Link></li> {/* Link to ProjectValidation */}
+            <li><Link to="/student-progress">Student Progress</Link></li> {/* Link to StudentProgress */}
+            <li><Link to="/jury-assignment">Jury Assignment</Link></li> {/* Link to JuryAssignment */}
           </ul>
         </nav>
 
@@ -43,6 +49,9 @@ function App() {
           <Route path="/teacher" element={<TeacherDashboard />} />
           <Route path="/admin" element={<AdminDashboard />} />
           <Route path="/entreprise" element={<EntrepriseDashboard />} />
+          <Route path="/project-validation" element={<ProjectValidation />} /> {/* Route for ProjectValidation */}
+          <Route path="/student-progress" element={<StudentProgress />} /> {/* Route for StudentProgress */}
+          <Route path="/jury-assignment" element={<JuryAssignment />} /> {/* Route for JuryAssignment */}
         </Routes>
       </div>
     </Router>

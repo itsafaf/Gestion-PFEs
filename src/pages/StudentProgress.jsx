@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { FaChalkboardTeacher, FaCalendarAlt, FaCheckCircle, FaEdit } from "react-icons/fa";
-import Nav from "../Nav/Nav";
-import Footer from "../Footer/Footer";
-import "./LandingPage.css";
+import Nav from "../components/Nav/Nav";
+import Footer from "../components/Footer/Footer";
+import "./css/StudentProgress.css";
 
 const StudentProgress = () => {
   const [students, setStudents] = useState([
