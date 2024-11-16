@@ -16,7 +16,7 @@ import JuryAssignment from './pages/JuryAssignment'; // Import JuryAssignment
 import NotificationCenter from './pages/NotificationCenter';
 import EmailSettings from './pages/EmailSettings';
 import UserManagement from './pages/UserManagement';
-
+import ProjectScheduler from './pages/PresentationScheduler';
 function App() {
   return (
     <Router>
@@ -58,6 +58,7 @@ function App() {
           <Route path="/notification" element={<NotificationCenter />} /> 
           <Route path="/emailsettings" element={<EmailSettings />} /> 
           <Route path="/usermanagement" element={<UserManagement />} /> 
+          <Route path="/scheduler" element={<ProjectScheduler />} /> 
         </Routes>
       </div>
     </Router>
