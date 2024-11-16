@@ -5,51 +5,63 @@ import Footer from '../Footer/Footer';
 import { FaChalkboardTeacher, FaUserGraduate, FaCogs, FaRocket, FaHandsHelping, FaCheckCircle } from 'react-icons/fa';
 import './LandingPage.css';
 
+const Card = ({ icon, title, description, link }) => (
+  <Link to={link} className="card-link">
+    <div className="card">
+      <div className="icon">{icon}</div>
+      <h2>{title}</h2>
+      <p>{description}</p>
+    </div>
+  </Link>
+);
+
+const FeatureItem = ({ icon, text }) => (
+  <div className="feature-item">
+    <div className="feature-icon">{icon}</div>
+    <p>{text}</p>
+  </div>
+);
+
 const LandingPage = () => {
+  const graduatePhotoURL = "https://files.oaiusercontent.com/file-BeR6pwAVfleAeoaXRGVxg58p?...";
+
   return (
     <div className="landing-page">
       <Nav />
 
-      {/* Section d'image principale */}
+      {/* Main Section */}
       <section className="main-content">
         <div className="image-container">
-          <img
-            src="https://files.oaiusercontent.com/file-BeR6pwAVfleAeoaXRGVxg58p?se=2024-11-14T22%3A57%3A10Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D16ed3402-1f97-4295-9a0e-90ffdfff6f13.webp&sig=L78vLagCiIDG8yYZ2WvIpSv%2BqISTdPncEcLhjex4YFE%3D"
-            alt="Graduate"
-            className="graduate-photo"
-          />
+          <img src={graduatePhotoURL} alt="Graduate" className="graduate-photo" />
         </div>
         <h1 className="main-title">Bienvenue sur la plateforme de gestion académique</h1>
         <p className="main-subtitle">Connectez enseignants, étudiants et administrateurs en un seul endroit.</p>
         <button className="cta-button">Commencer Maintenant</button>
       </section>
 
-      {/* Section des cartes alignées sur une ligne */}
+      {/* Cards Section */}
       <section className="card-container">
-        <div className="card">
-          <Link to="/teacher" className="card-link"> 
-            <div className="icon"><FaChalkboardTeacher /></div>
-            <h2>Enseignant</h2>
-            <p>Développe des compétences pour former la prochaine génération.</p>
-          </Link>
-        </div>
-        <div className="card">
-          <Link to="/student" className="card-link"> 
-            <div className="icon"><FaUserGraduate /></div>
-            <h2>Étudiant</h2>
-            <p>Acquiert les connaissances pour un avenir prometteur.</p>
-          </Link>
-        </div>
-        <div className="card">
-          <Link to="/admin" className="card-link"> 
-            <div className="icon"><FaCogs /></div>
-            <h2>Admin</h2>
-            <p>Gère les ressources et les activités de la plateforme.</p>
-          </Link>
-        </div>
+        <Card 
+          icon={<FaChalkboardTeacher />} 
+          title="Enseignant" 
+          description="Développe des compétences pour former la prochaine génération." 
+          link="/teacher" 
+        />
+        <Card 
+          icon={<FaUserGraduate />} 
+          title="Étudiant" 
+          description="Acquiert les connaissances pour un avenir prometteur." 
+          link="/student" 
+        />
+        <Card 
+          icon={<FaCogs />} 
+          title="Admin" 
+          description="Gère les ressources et les activités de la plateforme." 
+          link="/admin" 
+        />
       </section>
 
-      {/* Section Avantages */}
+      {/* Benefits Section */}
       <section className="benefits-section">
         <h2>Pourquoi choisir notre plateforme ?</h2>
         <div className="benefit">
@@ -62,22 +74,13 @@ const LandingPage = () => {
         </div>
       </section>
 
-      {/* Section Fonctionnalités */}
+      {/* Features Section */}
       <section className="features-section">
         <h2>Fonctionnalités principales</h2>
         <div className="feature-list">
-          <div className="feature-item">
-            <FaCheckCircle className="feature-icon" />
-            <p>Gestion des cours et des emplois du temps</p>
-          </div>
-          <div className="feature-item">
-            <FaCheckCircle className="feature-icon" />
-            <p>Suivi des performances académiques</p>
-          </div>
-          <div className="feature-item">
-            <FaCheckCircle className="feature-icon" />
-            <p>Accès aux ressources et aux informations administratives</p>
-          </div>
+          <FeatureItem icon={<FaCheckCircle />} text="Gestion des cours et des emplois du temps" />
+          <FeatureItem icon={<FaCheckCircle />} text="Suivi des performances académiques" />
+          <FeatureItem icon={<FaCheckCircle />} text="Accès aux ressources et aux informations administratives" />
         </div>
       </section>
 
