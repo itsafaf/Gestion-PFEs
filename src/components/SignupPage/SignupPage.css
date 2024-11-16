@@ -12,7 +12,7 @@ body {
   }
   
   .bg-gradient-to-b {
-    background: linear-gradient(to bottom, #eff6ff, #e0f7fa);
+    background: linear-gradient(to bottom, #f0f9ff, #e0f7fa);
   }
   
   .flex {
@@ -54,6 +54,7 @@ body {
   }
   
   /* Card Styles */
+  .signup-card,
   .login-card {
     background-color: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(10px);
@@ -127,10 +128,9 @@ body {
     color: #2563eb;
   }
   
-  /* Error Messages */
-  .error-message {
-    background-color: #fee2e2;
-    color: #b91c1c;
+  /* Error & Success Messages */
+  .error-message,
+  .success-message {
     padding: 0.75rem;
     font-size: 0.875rem;
     border-radius: 0.375rem;
@@ -138,18 +138,14 @@ body {
     text-align: center;
   }
   
-  /* Spinner */
-  .spinner {
-    animation: spin 1s linear infinite;
+  .error-message {
+    background-color: #fee2e2;
+    color: #b91c1c;
   }
   
-  @keyframes spin {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
+  .success-message {
+    background-color: #d1fae5;
+    color: #047857;
   }
   
   /* Footer */
