@@ -7,7 +7,8 @@ import SideBar from './components/SideBar/SideBar';
 import LandingPage from './components/LandingPage/LandingPage'; // Import the landing page
 import SignupPage from './components/SignupPage/SignupPage';
 import StudentProfile from './pages/Etudiant.jsx';
-
+import  AdminDashboard from './pages/AdminDashboard.jsx';
+import TeacherDashboard from './pages/TeacherDashboard.jsx';
 function App() {
   return (
     <Router>
@@ -36,6 +37,12 @@ function App() {
             <li>
               <Link to="/student">Étudiant</Link>
             </li>
+            <li>
+              <Link to="/teacher">Teacher</Link>
+            </li>
+            <li>
+              <Link to="/admin">Admin</Link>
+            </li>
           </ul>
         </nav>
 
@@ -48,6 +55,8 @@ function App() {
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/sidebar" element={<SideBar />} />
           <Route path="/student" element={<StudentProfile />} />
+          <Route path="/admin" element={<AdminDashboard />} />
+          <Route path="/teacher" element={<TeacherDashboard />} />
         </Routes>
       </div>
     </Router>
