@@ -6,10 +6,8 @@ import Dashboard from './components/Dashboard/Dashboard';
 import SideBar from './components/SideBar/SideBar';
 import LandingPage from './components/LandingPage/LandingPage'; // Import the landing page
 import SignupPage from './components/SignupPage/SignupPage';
-import StudentProfile from './pages/StudentDashboard.jsx';
-import  AdminDashboard from './pages/AdminDashboard.jsx';
-import TeacherDashboard from './pages/TeacherDashboard.jsx';
-import EntrepriseDashboard from './pages/EntrepriseDashboard.jsx';
+
+
 function App() {
   return (
     <Router>
@@ -58,10 +56,7 @@ function App() {
           <Route path="/profile" element={<ProfilePage />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/sidebar" element={<SideBar />} />
-          <Route path="/student" element={<StudentProfile />} />
-          <Route path="/admin" element={<AdminDashboard />} />
-          <Route path="/teacher" element={<TeacherDashboard />} />
-          <Route path="/entreprise" element={<EntrepriseDashboard />} />
+          
         </Routes>
       </div>
     </Router>
