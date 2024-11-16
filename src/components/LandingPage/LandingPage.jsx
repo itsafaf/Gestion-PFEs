@@ -41,6 +41,27 @@ const LandingPage = () => {
 
       {/* Cards Section */}
       <section className="card-container">
+<<<<<<< HEAD
+        <div className="card">
+        <Link to="/prof" className="card-link">
+          <div className="icon"><FaChalkboardTeacher /></div>
+          <h2>Enseignant</h2>
+          <p>Développe des compétences pour former la prochaine génération.</p>
+          </Link>
+        </div>
+        <div className="card">
+        <Link to="/student" className="card-link"> 
+          <div className="icon"><FaUserGraduate /></div>
+          <h2>Étudiant</h2>
+          <p>Acquiert les connaissances pour un avenir prometteur.</p>
+        </Link>
+        </div>
+        <div className="card">
+          <div className="icon"><FaCogs /></div>
+          <h2>Admin</h2>
+          <p>Gère les ressources et les activités de la plateforme.</p>
+        </div>
+=======
         <Card 
           icon={<FaChalkboardTeacher />} 
           title="Enseignant" 
@@ -59,6 +80,7 @@ const LandingPage = () => {
           description="Gère les ressources et les activités de la plateforme." 
           link="/admin" 
         />
+>>>>>>> 8849ab5eeea7632f8a25291c824114685e6b5b98
       </section>
 
       {/* Benefits Section */}
