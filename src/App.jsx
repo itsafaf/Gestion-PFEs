@@ -18,6 +18,7 @@ import EmailSettings from './pages/EmailSettings';
 import UserManagement from './pages/UserManagement';
 import ProjectScheduler from './pages/PresentationScheduler';
 import Dashboards from './pages/Dashboards';
+import ProjectMatching from './pages/ProjectMatching';
 function App() {
   return (
     <Router>
@@ -61,6 +62,7 @@ function App() {
           <Route path="/usermanagement" element={<UserManagement />} /> 
           <Route path="/scheduler" element={<ProjectScheduler />} /> 
           <Route path="/dashboards" element={<Dashboards />} /> 
+          <Route path="/projectmatching" element={<ProjectMatching />} /> 
         </Routes>
       </div>
     </Router>
