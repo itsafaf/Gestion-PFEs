@@ -1,11 +1,9 @@
-// components/LandingPage/LandingPage.jsx
 import React from 'react';
 import { Link } from "react-router-dom";
 import Nav from '../Nav/Nav';
 import Footer from '../Footer/Footer';
 import { FaChalkboardTeacher, FaUserGraduate, FaCogs, FaRocket, FaHandsHelping, FaCheckCircle } from 'react-icons/fa';
 import './LandingPage.css';
-
 
 const LandingPage = () => {
   return (
@@ -17,6 +15,7 @@ const LandingPage = () => {
         <div className="image-container">
           <img
             src="https://files.oaiusercontent.com/file-BeR6pwAVfleAeoaXRGVxg58p?se=2024-11-14T22%3A57%3A10Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D16ed3402-1f97-4295-9a0e-90ffdfff6f13.webp&sig=L78vLagCiIDG8yYZ2WvIpSv%2BqISTdPncEcLhjex4YFE%3D"
+            alt="Graduate"
             className="graduate-photo"
           />
         </div>
@@ -28,21 +27,25 @@ const LandingPage = () => {
       {/* Section des cartes alignées sur une ligne */}
       <section className="card-container">
         <div className="card">
-          <div className="icon"><FaChalkboardTeacher /></div>
-          <h2>Enseignant</h2>
-          <p>Développe des compétences pour former la prochaine génération.</p>
+          <Link to="/teacher" className="card-link"> 
+            <div className="icon"><FaChalkboardTeacher /></div>
+            <h2>Enseignant</h2>
+            <p>Développe des compétences pour former la prochaine génération.</p>
+          </Link>
         </div>
         <div className="card">
-        <Link to="/student" className="card-link"> 
-          <div className="icon"><FaUserGraduate /></div>
-          <h2>Étudiant</h2>
-          <p>Acquiert les connaissances pour un avenir prometteur.</p>
-        </Link>
+          <Link to="/student" className="card-link"> 
+            <div className="icon"><FaUserGraduate /></div>
+            <h2>Étudiant</h2>
+            <p>Acquiert les connaissances pour un avenir prometteur.</p>
+          </Link>
         </div>
         <div className="card">
-          <div className="icon"><FaCogs /></div>
-          <h2>Admin</h2>
-          <p>Gère les ressources et les activités de la plateforme.</p>
+          <Link to="/admin" className="card-link"> 
+            <div className="icon"><FaCogs /></div>
+            <h2>Admin</h2>
+            <p>Gère les ressources et les activités de la plateforme.</p>
+          </Link>
         </div>
       </section>
 
