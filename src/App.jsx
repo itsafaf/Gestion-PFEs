@@ -9,6 +9,7 @@ import SignupPage from './components/SignupPage/SignupPage';
 import StudentProfile from './pages/StudentDashboard.jsx';
 import  AdminDashboard from './pages/AdminDashboard.jsx';
 import TeacherDashboard from './pages/TeacherDashboard.jsx';
+import EntrepriseDashboard from './pages/EntrepriseDashboard.jsx';
 function App() {
   return (
     <Router>
@@ -43,6 +44,9 @@ function App() {
             <li>
               <Link to="/admin">Admin</Link>
             </li>
+            <li>
+              <Link to="/entreprise">Entreprise</Link>
+            </li>
           </ul>
         </nav>
 
@@ -57,6 +61,7 @@ function App() {
           <Route path="/student" element={<StudentProfile />} />
           <Route path="/admin" element={<AdminDashboard />} />
           <Route path="/teacher" element={<TeacherDashboard />} />
+          <Route path="/entreprise" element={<EntrepriseDashboard />} />
         </Routes>
       </div>
     </Router>
