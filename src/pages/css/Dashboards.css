@@ -1,0 +1,178 @@
+/* Main Dashboard Container */
+.dashboard-container {
+    padding: 24px;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+  }
+  
+  .title {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .actions {
+    display: flex;
+    gap: 16px;
+  }
+  
+  .btn {
+    padding: 8px 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .outline-btn {
+    border: 1px solid #ccc;
+    background-color: transparent;
+  }
+  
+  .default-btn {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .icon-calendar, .icon-mail, .icon-upload {
+    font-size: 16px;
+  }
+  
+  .tabs {
+    margin-bottom: 24px;
+    display: flex;
+    gap: 16px;
+  }
+  
+  .tab-btn {
+    padding: 8px 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .tab-btn.active {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .overview-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-bottom: 24px;
+  }
+  
+  .stat-card {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 16px;
+  }
+  
+  .stat-card-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .stat-title {
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .stat-value {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .stat-icon {
+    font-size: 32px;
+  }
+  
+  .card {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 24px;
+  }
+  
+  .card-header {
+    padding: 16px;
+    background-color: #f7f7f7;
+  }
+  
+  .card-title {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .card-description {
+    font-size: 14px;
+    color: #777;
+  }
+  
+  .card-content {
+    padding: 16px;
+  }
+  
+  .file-input {
+    flex-grow: 1;
+  }
+  
+  .upload-section {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+  
+  .table-container {
+    overflow-x: auto;
+  }
+  
+  .user-table, .project-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .user-table th, .project-table th {
+    padding: 12px;
+    text-align: left;
+    font-weight: bold;
+    background-color: #f7f7f7;
+  }
+  
+  .user-table td, .project-table td {
+    padding: 12px;
+    border-top: 1px solid #ddd;
+  }
+  
+  .action-buttons {
+    display: flex;
+    gap: 8px;
+  }
+  
+  .small-btn {
+    padding: 4px 8px;
+    font-size: 12px;
+  }
+  
+  .select-section {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+  
+  .select-box {
+    padding: 8px;
+    border-radius: 4px;
+  }
+  
+  .new-project-btn {
+    background-color: #28a745;
+    color: white;
+  }
+  
