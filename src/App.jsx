@@ -1,37 +1,50 @@
-// App.jsx
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import './App.css';
 import LoginPage from './components/LoginPage/LoginPage';
 import ProfilePage from './components/ProfilePage/ProfilePage';
 import Dashboard from './components/Dashboard/Dashboard';
 import SideBar from './components/SideBar/SideBar';
-import LandingPage from './components/LandingPage/LandingPage'; // Importer la page de destination
-<<<<<<< HEAD
+import LandingPage from './components/LandingPage/LandingPage'; // Import the landing page
 import SignupPage from './components/SignupPage/SignupPage';
-=======
 import StudentProfile from './pages/Etudiant.jsx';
 
->>>>>>> d8e93a7b9df98972866c5182541738622e5000c3
 function App() {
   return (
     <Router>
       <div className="app">
-        {/* Menu de navigation pour accéder à chaque composant */}
-        <nav>
-          <Link to="/profile">Profile</Link>
-          <Link to="/login">Login</Link>
-          <Link to="/signup">SignupPage</Link>
-          <Link to="/dashboard">Dashboard</Link>
-          <Link to="/sidebar">SideBar</Link>
-          <Link to="/">Accueil</Link> {/* Lien vers la LandingPage */}
+        {/* Navigation menu */}
+        <nav className="navigation">
+          <ul>
+            <li>
+              <Link to="/">Accueil</Link> {/* Link to LandingPage */}
+            </li>
+            <li>
+              <Link to="/login">Login</Link>
+            </li>
+            <li>
+              <Link to="/signup">Signup</Link>
+            </li>
+            <li>
+              <Link to="/profile">Profile</Link>
+            </li>
+            <li>
+              <Link to="/dashboard">Dashboard</Link>
+            </li>
+            <li>
+              <Link to="/sidebar">SideBar</Link>
+            </li>
+            <li>
+              <Link to="/student">Étudiant</Link>
+            </li>
+          </ul>
         </nav>
 
-        {/* Définition des routes pour chaque composant */}
+        {/* Define routes for each component */}
         <Routes>
-          <Route path="/" element={<LandingPage />} /> {/* Route vers la LandingPage */}
-          <Route path="/profile" element={<ProfilePage />} />
+          <Route path="/" element={<LandingPage />} /> {/* Route for LandingPage */}
           <Route path="/login" element={<LoginPage />} />
           <Route path="/signup" element={<SignupPage />} />
+          <Route path="/profile" element={<ProfilePage />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/sidebar" element={<SideBar />} />
           <Route path="/student" element={<StudentProfile />} />
