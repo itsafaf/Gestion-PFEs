@@ -14,6 +14,8 @@ import ProjectValidation from './pages/ProjectValidation'; // Import ProjectVali
 import StudentProgress from './pages/StudentProgress'; // Import StudentProgress
 import JuryAssignment from './pages/JuryAssignment'; // Import JuryAssignment
 import NotificationCenter from './pages/NotificationCenter';
+import EmailSettings from './pages/EmailSettings';
+import UserManagement from './pages/UserManagement';
 
 function App() {
   return (
@@ -50,10 +52,12 @@ function App() {
           <Route path="/teacher" element={<TeacherDashboard />} />
           <Route path="/admin" element={<AdminDashboard />} />
           <Route path="/entreprise" element={<EntrepriseDashboard />} />
-          <Route path="/project-validation" element={<ProjectValidation />} /> {/* Route for ProjectValidation */}
-          <Route path="/student-progress" element={<StudentProgress />} /> {/* Route for StudentProgress */}
-          <Route path="/jury-assignment" element={<JuryAssignment />} /> {/* Route for JuryAssignment */}
-          <Route path="/notification" element={<NotificationCenter />} /> {/* Route for JuryAssignment */}
+          <Route path="/project-validation" element={<ProjectValidation />} />
+          <Route path="/student-progress" element={<StudentProgress />} /> 
+          <Route path="/jury-assignment" element={<JuryAssignment />} />
+          <Route path="/notification" element={<NotificationCenter />} /> 
+          <Route path="/emailsettings" element={<EmailSettings />} /> 
+          <Route path="/usermanagement" element={<UserManagement />} /> 
         </Routes>
       </div>
     </Router>
