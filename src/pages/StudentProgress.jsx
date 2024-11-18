@@ -25,7 +25,7 @@ const StudentProgress = () => {
 
   return (
     <div className="landing-page">
-      <Nav />
+  
       <section className="main-content">
         <h1 className="main-title">Suivi des Progrès des Étudiants</h1>
         <p className="main-subtitle">Surveillez les projets et performances des étudiants.</p>

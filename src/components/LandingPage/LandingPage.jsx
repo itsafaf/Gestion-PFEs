@@ -27,7 +27,7 @@ const LandingPage = () => {
 
   return (
     <div className="landing-page">
-      <Nav />
+    
 
       {/* Main Section */}
       <section className="main-content">

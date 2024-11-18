@@ -44,7 +44,7 @@ const JuryAssignment = () => {
 
   return (
     <div className="landing-page">
-      <Nav />
+     
       <section className="main-content">
         <h1 className="main-title">Jury Assignment</h1>
         <p className="main-subtitle">Assign jury members to the student projects.</p>
