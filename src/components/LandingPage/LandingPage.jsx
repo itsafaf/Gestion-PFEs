@@ -7,7 +7,7 @@ import './LandingPage.css';
 
 const Card = ({ icon, title, description, link }) => (
   <Link to={link} className="card-link">
-    <div className="card">
+    <div className="card" >
       <div className="icon">{icon}</div>
       <h2>{title}</h2>
       <p>{description}</p>
