@@ -10,16 +10,16 @@ import EntrepriseDashboard from './pages/EntrepriseDashboard';
 import AdminDashboard from './pages/AdminDashboard';
 import StudentDashboard from './pages/StudentDashboard';
 import TeacherDashboard from './pages/TeacherDashboard';
-import ProjectValidation from './pages/ProjectValidation'; // Import ProjectValidation
-import StudentProgress from './pages/StudentProgress'; // Import StudentProgress
-import JuryAssignment from './pages/JuryAssignment'; // Import JuryAssignment
+import ProjectValidation from './pages/ProjectValidation'; 
+import StudentProgress from './pages/StudentProgress'; 
+import JuryAssignment from './pages/JuryAssignment'; 
 import NotificationCenter from './pages/NotificationCenter';
 import EmailSettings from './pages/EmailSettings';
 import UserManagement from './pages/UserManagement';
 import ProjectScheduler from './pages/PresentationScheduler';
 import Dashboards from './pages/Dashboards';
 import ProjectMatching from './pages/ProjectMatching';
-import { Button, Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
+import ProjectEvaluation from './pages/ProjectEvaluation';
 function App() {
   return (
     <Router>
@@ -87,6 +87,7 @@ function App() {
           <Route path="/scheduler" element={<ProjectScheduler />} /> 
           <Route path="/dashboards" element={<Dashboards />} /> 
           <Route path="/projectmatching" element={<ProjectMatching />} /> 
+          <Route path="/projectevaluation" element={<ProjectEvaluation />} /> 
         </Routes>
       </div>
     </Router>

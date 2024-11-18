@@ -28,7 +28,7 @@ const ProjectValidation = () => {
 
   return (
     <div className="landing-page">
-      <Nav />
+ 
       <section className="main-content">
         <h1 className="main-title">Project Validation</h1>
         <p className="main-subtitle">Review and validate proposed student projects.</p>
